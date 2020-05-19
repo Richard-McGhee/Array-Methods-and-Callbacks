@@ -12,6 +12,10 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+const Final14 = fifaData.filter(function(item){
+    return item.RoundID === 255955
+});
+console.log(Final14);
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
