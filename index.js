@@ -13,8 +13,12 @@ console.log('its working');
 (e) Winner of 2014 world cup final */
 
 const Final = fifaData.forEach(function(item){
-    if(item.RoundID === 255955){
-        return `Home team is ${item["Home Team Name"]}. The away team is ${item["Away Team Name"]}. Home team goals are ${item["Home Team Goals"]}. Away team goals are ${item["Away Team Goals"]}.`
+    if (item.RoundID === 255955){
+        if (item["Home Team Goals"] > item["Away Team Goals"]){
+            return `Home team is ${item["Home Team Name"]}. The away team is ${item["Away Team Name"]}. Home team goals are ${item["Home Team Goals"]}. Away team goals are ${item["Away Team Goals"]}. Winner is ${item["Home Team Name"]}`
+        }else if (item["Home Team Goals"] < item["Away Team Goals"]){
+            return `Home team is ${item ["Home Team Name"]}. The away team is ${item["Away Team  Name"]}. Home team goals are ${item["Home Team Goals"]}. Away team goals are ${item["Away Team Goals"]}. Winner is ${item["Away Team Name"]}`
+        }
     }
 });
 
