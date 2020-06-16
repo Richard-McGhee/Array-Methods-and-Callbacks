@@ -94,8 +94,6 @@ function getWinners(getFinalsCB) {
             winners.push(item["Home Team Name"]);
         }else if(item["Away Team Goals"] > item["Home Team Goals"]){
             winners.push(item["Away Team Name"]);
-        }else {
-            winners.push("A Tie")
         }
     });
     return winners;
