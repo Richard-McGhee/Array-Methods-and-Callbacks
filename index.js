@@ -12,27 +12,12 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
-// const Final = fifaData.forEach(function(item){
-//     if (item.RoundID === 255955){
-//         if (item["Home Team Goals"] > item["Away Team Goals"]){
-//             return `Home team is ${item["Home Team Name"]}. The away team is ${item["Away Team Name"]}. Home team goals are ${item["Home Team Goals"]}. Away team goals are ${item["Away Team Goals"]}. Winner is ${item["Home Team Name"]}`
-//         }else if (item["Home Team Goals"] < item["Away Team Goals"]){
-//             return `Home team is ${item ["Home Team Name"]}. The away team is ${item["Away Team  Name"]}. Home team goals are ${item["Home Team Goals"]}. Away team goals are ${item["Away Team Goals"]}. Winner is ${item["Away Team Name"]}`
-//         }
-//     }
-// });
 
-// console.log(Final);
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
 function getFinals(filtFinal) {
-    return filtFinal.filter(function(item){
-        if (item.stage === "Final"){
-        return item.stage;
-        }
-    });
-};
+    return filtFinal.filter(function(match)
 
 console.log(getFinals(fifaData));
 
