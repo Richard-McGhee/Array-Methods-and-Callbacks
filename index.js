@@ -13,13 +13,11 @@ console.log('its working');
 (e) Winner of 2014 world cup final */
 
 function bestTeam(data){
-    // const homeTeam = [];
     data.forEach(function(item){
         if(item.Year === 2014 && item.Stage === "Final"){
            console.log(item["Home Team Name"]);
         };
     });
-    // return homeTeam;
 }
 bestTeam(fifaData);
 
