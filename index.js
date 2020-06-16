@@ -21,6 +21,46 @@ function bestTeam(data){
 }
 bestTeam(fifaData);
 
+function aCompleteJoke(data){
+    data.forEach(function(item){
+        if(item.Year === 2014 && item.Stage === "Final"){
+           console.log(item["Away Team Name"]);
+        };
+    });
+}
+aCompleteJoke(fifaData);
+
+function whyWeWon(data){
+    data.forEach(function(item){
+        if(item.Year === 2014 && item.Stage === "Final"){
+           console.log(item["Home Team Goals"]);
+        };
+    });
+}
+whyWeWon(fifaData);
+
+function whyTheyLost(data){
+    data.forEach(function(item){
+        if(item.Year === 2014 && item.Stage === "Final"){
+           console.log(item["Away Team Goals"]);
+        };
+    });
+}
+whyTheyLost(fifaData);
+
+function bestWorldWide(data){
+    data.forEach(function(item){
+        if(item.Year === 2014 && item.Stage === "Final"){
+            if(item["Home Team Goals"] > item["Away Team Goals"]){
+                console.log(item["Home Team Name"]);
+            }
+            else if(item["Away Team Goals"] > item["Home Team Goals"]){
+                return console.log(item["Away Team Name"])
+            };
+        };
+    });
+}
+bestWorldWide(fifaData);
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
